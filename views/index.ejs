@@ -1,0 +1,18 @@
+
+    <%- include('./partials/header'); -%>
+    <h1><%= title %></h1>
+    <p><%= meta %></p>
+    <p>Welcome to katka <%= title %></p> <%=days %>
+    <ul>
+      <% for(var i=0;days.length>i; i++){ %>
+        <li><%= days[i] %></li>
+      <%};%>
+    </ul>
+    <ul>
+      <% for(var i=0;users.length>i; i++){ %>
+        <li><%= users[i].name %> <%= users[i].surname %></li>
+      <%};%>
+    </ul>
+    <%- include('./partials/footer'); -%>
+
+

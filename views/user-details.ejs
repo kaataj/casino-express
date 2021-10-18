@@ -1,0 +1,41 @@
+<%- include('./partials/header'); -%>
+<h1>Edit user user page</h1>
+
+<%if(user){%>
+<p><%= user.email%></p>
+<%}%>
+
+
+
+<form action="/user-details" method="POST" >
+    <div class="container">
+      <p>Please update your details.</p>
+      <hr>
+  
+      <label for="email"><b>Email</b></label>
+      <input type="hidden" value="<%=user._id%>" name="id" required>
+      <input type="text" placeholder="Enter Email" value="<%=user.email%>" name="email" required>
+  
+    
+      <label for="name"><b>Name</b></label>
+      <input type="text" placeholder="Enter Name" value="<%= user.name%>" name="name" required>
+
+      <label for="surname"><b>Surname</b></label>
+      <input type="text" placeholder="Enter surname" value="<%= user.surname%>" name="surname" required>
+      
+      <label>
+        <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+      </label>
+  
+  
+      <div class="clearfix">
+        <button type="submit" class="signupbtn">Update</button>
+      </div>
+    </div>
+  </form>
+
+  <% if(success === "true"){ %>  
+    <h5>Form was success</h5>
+<% } %>
+
+<%- include('./partials/footer'); -%>
