@@ -11,14 +11,14 @@ function loadData(url){
     })
     .then(function(users) {
 
-        users.forEach(user => {
-            var LI = document.createElement("LI");                
-            var innerText = document.createTextNode(user.email);       
-            LI.appendChild(innerText);  
-            ///<li>text</li>                           
-            app.appendChild(LI); 
-           // console.log(user.email);
-        });
+        // users.forEach(user => {
+        //     var LI = document.createElement("LI");                
+        //     var innerText = document.createTextNode(user.email);       
+        //     LI.appendChild(innerText);  
+        //     ///<li>text</li>                           
+        //     app.appendChild(LI); 
+        //    // console.log(user.email);
+        // });
 
     }).catch(function(error) {
         console.log("error",error)
@@ -28,7 +28,7 @@ function loadData(url){
 
 loadData();
 
-loadData();
+localStorage.setItem('myCat', ['jo','Tom']);
 
 
         
