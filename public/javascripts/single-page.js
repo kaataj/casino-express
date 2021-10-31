@@ -1,3 +1,4 @@
+const { get } = require("../../routes");
 
 const app = document.getElementById("app");
 
@@ -28,7 +29,24 @@ function loadData(url){
 
 loadData();
 
+
+
 localStorage.setItem('myCat', ['jo','Tom']);
+
+
+
+async function Request(){
+
+    try { 
+   const user  = await fetch('http://casino/api');
+   const userPhotos  = await fetch(`http://casino/api/photod/${user._id}`);
+    }
+    catch
+   
+
+
+
+}
 
 
         
